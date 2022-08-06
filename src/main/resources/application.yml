@@ -1,0 +1,15 @@
+server:
+  port: 8088
+spring:
+  redis:
+    cluster:
+      nodes: 192.168.230.131:6379,192.168.230.131:6380,192.168.230.131:6381,192.168.230.131:6382,192.168.230.131:6383,192.168.230.131:6384
+      max-redirects: 1
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    timeout: 10000
